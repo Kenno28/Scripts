@@ -1,4 +1,8 @@
 Automations that I coded to get to know Python better
 
 List of Automations:
-- Sort: This Automation sorts my Download Folder
+- Sort: This automation sorts my Download Folder
+- Track Item Prices: This automation observes the prices of items and saves them in a CSV file.
+- Track Price History: This automation tracks the price history of an item.
+- Track Customer Ratings: This script browses through customer ratings and saves them in a .txt file.
+- Data Science Project: A project I completed in a course to understand the basics of Python and Data Science.
