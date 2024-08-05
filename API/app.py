@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, Response
+from flask import Flask, jsonify, Response, request
 import matplotlib.pyplot as plt
 import database
 import pandas as pd
@@ -41,6 +41,17 @@ def get_worker(count):
     plt.close()
 
     return Response(img.getvalue(), mimetype='image/png')
+
+@app.route("/worker", methods={"PUT"})
+def updateWorker():
+    data = request.get_json()
+     
+    if not data:
+        return jsonify({"error": "Invalid Input"}), 400
+
+    return database.update_Worker(data) 
+
+
 
 if __name__ == '__main__':
     # Flask-Anwendung starten
